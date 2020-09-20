@@ -72,6 +72,14 @@ void setup() {
     switchVCC(keyboardconfig.VCCSwitchEnabled); // turn on VCC when starting up if needed.
   }
 
+  #define PROG_PIN 5
+  pinMode(PROG_PIN, OUTPUT);
+  digitalWrite(PROG_PIN, 0);
+
+  // #define POWER_PIN 32+9
+  // pinMode(POWER_PIN, OUTPUT);
+  // digitalWrite(POWER_PIN, 0); // enable power (0-enable, 1-disable)
+
   keyscantimer.begin(keyboardconfig.timerkeyscaninterval, keyscantimer_callback);
   batterytimer.begin(keyboardconfig.timerbatteryinterval, batterytimer_callback);
   setupBluetooth();
