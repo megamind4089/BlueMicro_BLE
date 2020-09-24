@@ -68,12 +68,13 @@ void setupKeymap() {
 
 #if KEYBOARD_SIDE == RIGHT
 
+#define _CAP_M  LSFT(KC_M)
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
 KEYMAP2ARRAY(KEYMAP(
                     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_BSPC,  \
                     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_BSLS,  \
                     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,  \
-          KC_RBRC,  KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_MINS,  \
+          _CAP_M,   KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_MINS,  \
                     KC_ENT,   LAYER_1,  KC_GRV,   KC_EQL    \
                    ));
 
